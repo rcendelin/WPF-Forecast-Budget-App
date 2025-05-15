@@ -1,2 +1,1 @@
-# WPF-Forecast-Budget-App
-A WPF application for managing forecast and budget plans
+This repository is empty. Any task executed on it should be considered a new capability and needs to be created.
