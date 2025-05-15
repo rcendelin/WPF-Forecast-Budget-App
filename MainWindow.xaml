@@ -1,0 +1,33 @@
+<Window x:Class="ForecastBudgetApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Forecast and Budget Management" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Forecast and Budget Management" FontSize="20" FontWeight="Bold" Margin="10"/>
+
+        <DataGrid x:Name="ForecastBudgetDataGrid" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="Auto"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="Auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+            <Button x:Name="CreateNewVersionButton" Content="Create New Version" Width="150" Margin="5"/>
+            <Button x:Name="ExportToXLSXButton" Content="Export to XLSX" Width="150" Margin="5"/>
+            <Button x:Name="ComparePlansButton" Content="Compare Plans" Width="150" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
